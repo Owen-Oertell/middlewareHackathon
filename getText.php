@@ -23,7 +23,6 @@ $username = $decoded_array["username"];
 
 $client = new MongoDB\Client('mongodb+srv://dbrunner:dHOoEPz1HWw6Ihny@cluster0-uwqwt.azure.mongodb.net/test?retryWrites=true&w=majority');
 // Select the user collection
-$hashPass = hash("sha384",$password);
 $collection = $client->hackathon->userdata;
 $document = $collection->findOne(['username' => $username]);
 
